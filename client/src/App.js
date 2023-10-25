@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     fetch("/api").then(res => res.json()).then(data => {
       setBackEndData(data);
-    })
+    }).catch(e => console.error("Error connecting to server port 5000:", e))
   }, [])
 
   return (
